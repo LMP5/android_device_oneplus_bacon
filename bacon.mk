@@ -38,6 +38,13 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
     $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml
 
+# CameraNext GalleryNext
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/CameraNext/CameraNext.apk:system/priv-app/CameraNext/CameraNext.apk \
+    $(LOCAL_PATH)/prebuilt/GalleryNext/GalleryNext.apk:system/priv-app/GalleryNext/GalleryNext.apk\
+    $(LOCAL_PATH)/prebuilt/libs/libjni_mosaic_next.so:system/lib/libjni_mosaic_next.so\
+    $(LOCAL_PATH)/prebuilt/libs/libjni_tinyplanet_next.so:system/lib/libjni_tinyplanet_next.so
+
 # NFC packages
 PRODUCT_PACKAGES += \
     NfcNci \
@@ -65,7 +72,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += camera.bacon
 
 # Device uses high-density artwork where available
-PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
+PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # call dalvik heap config
